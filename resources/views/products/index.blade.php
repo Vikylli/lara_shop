@@ -35,7 +35,7 @@
                             @csrf
                             <div class="input-group">
                                 <input type="number" min="1" class="form-control" name="qty" value="1">
-                                <input type="hidden" name="product_id" value="{{ $product->product_id }}">
+                                <input type="hidden" name="product_id" value="{{ $product->id }}">
                                 <div class="input-group-append">
                                     <button class="btn btn-info btn-block cart-addtocart"  type="submit"><i
                                             class="fas fa-cart-arrow-down"></i> Купить
