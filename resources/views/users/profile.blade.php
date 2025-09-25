@@ -9,6 +9,7 @@
 
         <p><strong>Имя:</strong> {{ $user->name }}</p>
         <p><strong>Email:</strong> {{ $user->email }}</p>
+        <p><strong>Phone:</strong> {{ $user->phone }}</p>
 
         <div class="d-flex justify-content-between mt-4">
             <a href="{{ route('products.index') }}" class="btn btn-secondary">Каталог</a>
