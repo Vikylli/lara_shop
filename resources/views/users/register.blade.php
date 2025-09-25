@@ -5,7 +5,7 @@
     @error('login')
     {{ $message }}
     @enderror
-    <form action="{{ route('index') }}" method="POST">
+    <form action="{{ route('register.index') }}" method="POST">
           @csrf
 
             <div class="mb-3">
@@ -17,7 +17,7 @@
                 <label class="form-label">Электронная почта</label>
                 <input type="email" name="email" class="form-control" value="{{ old('email') }}" required>
             </div>
-            
+
             <div class="mb-3">
                  <label class="form-label">Номер телефона</label>
                  <input type="tel" name="phone" class="form-control" value="{{ old('phone') }}" required>

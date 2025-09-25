@@ -19,10 +19,10 @@
             <a class="nav-link active" aria-current="page" href="{{ route('login') }}">Авторизация</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="{{ route('index') }}">Регистрация</a>
+            <a class="nav-link active" aria-current="page" href="{{ route('register.index') }}">Регистрация</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="{{ route('index') }}">Выйти</a>
+            <a class="nav-link active" aria-current="page" href="{{ route('products.index') }}">Выйти</a>
           </li>
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="{{ route('profile') }}">Аккаунт</a>

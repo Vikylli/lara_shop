@@ -26,8 +26,8 @@ use Illuminate\Support\Facades\Route;
 //Route::get('/', '\App\Http\Controllers\ProductController@index')->name('home');
 
 
-Route::get('/',[UserController::class, 'index'])->name('index');
-Route::post('/',[UserController::class, 'store']);
+Route::get('/register',[UserController::class, 'index'])->name('register.index');
+Route::post('/register',[UserController::class, 'store']);
 Route::get('/login', [UserController::class, 'loginForm'])->name('login');
 Route::post('/login', [UserController::class, 'login']);
 Route::post('/logout', [UserController::class, 'logout'])->name('logout');
@@ -36,7 +36,7 @@ Route::get('/profile', [UserController::class, 'profile'])
     ->middleware('auth')
     ->name('profile');
 
-Route::get('/products', [ProductController::class, 'index'])->name('products.index');
+Route::get('/', [ProductController::class, 'index'])->name('products.index');
 Route::get('/product/{slug}', [ProductController::class, 'show'])->name('products.show');
 Route::get('/category/{slug}', [CategoryController::class, 'show'])->name('categories.show');
 
