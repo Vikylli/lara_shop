@@ -17,6 +17,11 @@
                 <label class="form-label">Электронная почта</label>
                 <input type="email" name="email" class="form-control" value="{{ old('email') }}" required>
             </div>
+            
+            <div class="mb-3">
+                 <label class="form-label">Номер телефона</label>
+                 <input type="tel" name="phone" class="form-control" value="{{ old('phone') }}" required>
+            </div>
 
             <div class="mb-3">
                 <label class="form-label">Пароль</label>

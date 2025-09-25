@@ -22,12 +22,14 @@ class UserController extends Controller
         $request->validate([
             'name'=>'required',
             'email'=>'required|email|unique:users',
+            'phone'=>'required|unique:users',
             'password'=>'required|confirmed',
         ]);
 
         $user= User::create([
             'name'=>$request->name,
             'email'=>$request->email,
+            'phone'=> $request->phone,
             'password'=>Hash::make($request->password),
         ]);
 
