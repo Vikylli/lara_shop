@@ -9,17 +9,31 @@
             <li class="nav-item active">
                 <a class="nav-link" href="index.html">Главная <span class="sr-only">(current)</span></a>
             </li>
+           
               @foreach ( $categories as $category )
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('categories.show', ['slug'=>$category->slug]) }}">{{ $category->title }}</a>
                     </li>
             @endforeach
-           
+           <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{{ route('login') }}">Авторизация</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{{ route('index') }}">Регистрация</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{{ route('index') }}">Выйти</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{{ route('profile') }}">Аккаунт</a>
+          </li>
            <li class="nav-item">
                 <button onclick="getCart('{{ route('cart.show') }}')" type="button" class="btn btn-primary">
                     Корзина <span class="badge badge-light mini-cart-qty">{{ session('cart_qty') ?? 0 }}</span>
                 </button>
         </li>
+         
+          
         </ul>
         <form class="form-inline">
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">

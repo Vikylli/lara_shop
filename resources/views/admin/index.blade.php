@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container">
-        <h1>Панель администратора</h1>
+        <h1>Панель администратора </h1>
         <a href="{{ route('admin.create') }}" class="btn btn-success mb-3">Добавить</a>
 
         @if (session('success'))
