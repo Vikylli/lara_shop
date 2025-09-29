@@ -9,12 +9,12 @@
             @method('PUT')
            <div class="mb-3">
                 <label for="title" class="form-label">Наименование</label>
-                <input type="text" class="form-control" id="title" name="title" required>
+                <input type="text" class="form-control" id="title" name="title" value="{{ old('title', $product->title ?? '') }}"required>
             </div>
 
             <div class="mb-3">
                 <label for="content" class="form-label">Описание</label>
-                <textarea class="form-control" id="content" name="content"></textarea>
+                <textarea class="form-control" id="content" name="content" >{{ old('content', $product->content ?? '') }}</textarea>
             </div>
 
             <div class="mb-3">
@@ -41,12 +41,12 @@
 
             <div class="mb-3">
                 <label for="price" class="form-label">Цена</label>
-                <input type="number" class="form-control" id="price" name="price" step="0.01" required>
+                <input type="number" class="form-control" id="price" name="price" step="0.01" value="{{ old('price', $product->price ?? '') }}" required>
             </div>
 
             <div class="mb-3">
                 <label for="old_price" class="form-label">Старая цена</label>
-                <input type="number" class="form-control" id="old_price" name="old_price" step="0.01">
+                <input type="number" class="form-control" id="old_price" name="old_price" value="{{ old('old_price', $product->old_price ?? '') }}" step="0.01">
             </div>
             <button type="submit" class="btn btn-primary">Сохранить</button>
         </form>

@@ -45,7 +45,7 @@ class Product extends Model
         if (!$this->img){
             return asset('no-image.png');
         } else{
-            return asset("assets/front/images/{$this->img}");
+            return asset("/{$this->img}");
         }
     }
 }

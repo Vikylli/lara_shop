@@ -17,10 +17,13 @@
                     <th>ID</th>
                     <th>Картинка</th>
                     <th>Наименование</th>
-                    <th>Цена</th>
-                    <th>Старая цена</th>
+                    <th>Slug</th>
+                    <th>Описание</th>
                     <th>Количество</th>
                     <th>Действия</th>
+                    <th>Цена</th>
+                    <th>Старая цена</th>
+                    <th>Изображения</th>
                 </tr>
             </thead>
             <tbody>
@@ -43,14 +46,16 @@
                          <td>{{ $product->old_price ?? '-' }} руб.</td>
                          <td>{{ $product->img}}</td>
                          <td>
-                             <a href="{{ route('admin.edit', $product->id) }}" class="btn btn-sm btn-primary">
-                                 <i class="fas fa-edit"></i> Редактировать
-                             </a>
+                             <form action="{{ route('admin.edit', $product->id) }}" method="GET" style="display: inline;">
+                                     <button type="submit" class="btn btn-sm btn-primary d-flex align-items-center"">
+                                         <i class="fas fa-edit "></i> Редактировать
+                                     </button>
+                            </form>
                              <form action="{{ route('admin.destroy', $product->id) }}" method="POST" style="display: inline-block;">
                                  @csrf
                                  @method('DELETE')
-                                 <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Вы уверены?')">
-                                     <i class="fas fa-trash"></i> Удалить
+                                 <button type="submit" class="btn btn-sm btn-danger  " style="min-width: 128px;" onclick="return confirm('Вы уверены?')">
+                                     <i class="fas fa-trash"></i> Удалить 
                                  </button>
                              </form>
                          </td>
